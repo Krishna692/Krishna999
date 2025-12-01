@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio Website</title>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Krishna</a>
+
+        <button id="menu-icon" class="theme-btn mobile-menu-btn">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav id="navbar">
+            <a href="#" class="active"> Home</a>
+            <a href="#">Services</a>
+            <a href="#">Skills</a>
+            <a href="#">Education</a>
+            <a href="#">Experience</a>
+            <a href="#">Contact</a>
+        </nav>
+
+        <button id="theme-toggle" class="theme-btn">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+    </header>
+
+    <section class="home">
+        <div class="home-img">
+            <img src="image/main.jpg" alt="Profile Image">
+        </div>
+
+        <div class="home-content">
+            <h1>Hi, It's <span>Krishna</span></h1>
+            <h3 class="typing-text">I'm a <span></span></h3>
+            <p>I’m curious, energetic, and always exploring new things. Whether it’s gaming, tech, or robotics, I dive in with full focus. I ask a lot of questions—not because I don’t know, but because I want to know more. I care deeply about doing things right and about my future.
+
+I have a creative side too—designs, rap songs, Roblox names—I like things that stand out. I’m also straightforward: if something doesn’t go how I want, I say it directly.
+
+Most importantly, I’m hardworking. Even after tough moments, I keep trying again, whether it’s exams, gaming grind, or personal goals..</p>
+
+            <div class="social-icons">
+                <a href="https://www.youtube.com/channel/UC8cp6AG0ERAIdM2hc-4U5-A" target="_blank">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+                
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                
+                <a href="https://www.tiktok.com/@krishna14245?is_from_webapp=1&sender_device=pc" target="_blank">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+                
+                <a href="https://www.instagram.com/krishna_24149?igsh=MndlYTZ5cWdyYTZt" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+
+            <a href="https://www.instagram.com/krishna_24149?igsh=MndlYTZ5cWdyYTZt" target="_blank" class="btn">
+                Follow me
+            </a>
+        </div>
+    </section>
+
+    <script>
+        const toggleBtn = document.getElementById('theme-toggle');
+        const menuIcon = document.getElementById('menu-icon');
+        const navbar = document.getElementById('navbar');
+        const body = document.body;
+
+        // 1. Theme Toggle Logic
+        toggleBtn.onclick = () => {
+            body.classList.toggle("light-mode");
+
+            if (body.classList.contains("light-mode")) {
+                toggleBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
+            } else {
+                toggleBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
+            }
+        }
+        
+        // 2. Mobile Menu Logic
+        menuIcon.onclick = () => {
+            navbar.classList.toggle('active');
+            
+            if (navbar.classList.contains('active')) {
+                menuIcon.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+            } else {
+                menuIcon.innerHTML = '<i class="fa-solid fa-bars"></i>';
+            }
+        }
+    </script>
+
+</body>
+</html>
